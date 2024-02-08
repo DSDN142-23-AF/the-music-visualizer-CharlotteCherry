@@ -3,7 +3,7 @@
 
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
   
-  let firstRun = true 
+  let firstRun = true;
   let testIng;
   
   function draw_one_frame (vocal,drum,bass,other){
@@ -17,7 +17,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   }
   
   background (20);
-  image (testIng, 100)
+  image (Background.png, 100)
   ,100
   }
 
@@ -38,4 +38,4 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
  //var step = i=10;
  // ellipse (step,drum, ballSize );
 //ellipse ( )
-
+}
