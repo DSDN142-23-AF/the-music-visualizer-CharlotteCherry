@@ -1,15 +1,12 @@
 
-// vocal, drum, bass, and other are volumes ranging from 0 to 100
-
-function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  
+// vocal, drum, bass, and other are volumes ranging from 0 to 100  
   let firstRun = true;
   let testIng;
   
   function draw_one_frame (vocal,drum,bass,other){
   
   if(firstRun){
-  rectmode (CENTER);
+  //rectmode (CENTER);
   testIng = loadImage ('Background.png');
   
   firstRun=false
@@ -17,8 +14,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   }
   
   background (20);
-  image (Background.png, 100)
-  ,100
+  image (testIng, 0,0)
   }
 
 
@@ -38,4 +34,4 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
  //var step = i=10;
  // ellipse (step,drum, ballSize );
 //ellipse ( )
-}
+
