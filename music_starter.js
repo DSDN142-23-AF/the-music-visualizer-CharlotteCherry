@@ -6,7 +6,11 @@
   function draw_one_frame (vocal,drum,bass,other){
   
   if(firstRun){
+<<<<<<< Updated upstream
   //rectmode (CENTER);
+=======
+  rectMode (CENTER);
+>>>>>>> Stashed changes
   testIng = loadImage ('Background.png');
   
   firstRun=false
@@ -14,7 +18,12 @@
   }
   
   background (20);
+<<<<<<< Updated upstream
   image (testIng, 0,0)
+=======
+  image (testIng, 100)
+  ,100
+>>>>>>> Stashed changes
   }
 
 
