@@ -1,29 +1,71 @@
 
 // vocal, drum, bass, and other are volumes ranging from 0 to 100  
-  let firstRun = true;
+ 
+let firstRun = true;
   let testIng;
   
   function draw_one_frame (vocal,drum,bass,other){
   
   if(firstRun){
-<<<<<<< Updated upstream
   //rectmode (CENTER);
-=======
   rectMode (CENTER);
->>>>>>> Stashed changes
   testIng = loadImage ('Background.png');
   
   firstRun=false
   
   }
   
-  background (20);
-<<<<<<< Updated upstream
+  //background (20);
   image (testIng, 0,0)
-=======
-  image (testIng, 100)
-  ,100
->>>>>>> Stashed changes
+
+  //ellipse (630,550,100,100); 
+ var ballSize = 550;
+  var ballSize = map(bass,200,200,10,10);
+  ellipse (width/2,bass, ballSize );
+
+
+
+  //////////////////////////////////////////////
+
+let SecondRun = true
+let eye = {};
+function draw_one_frame (vocal,drum,bass,other){
+  if (SecondRun){
+rectMode(CENTER);
+eye.push(loadImage('eyes_0.png'));
+eye.push(loadImage('eyes_1.png'));
+eye.push(loadImage('eyes_2.png'));
+
+SecondRun = flase 
+  }
+
+let VocalFrame = int(map(vocal,0,100,0,2));
+concole.log(VocalFrame);
+push();
+scale();
+images(eye[VocalFrame],width/2, height/2);
+pop();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }
 
 
