@@ -16,73 +16,59 @@ let firstRun = true;
   }
   
   //background (20);
-  image (testIng, 0,0)
+  image (testIng, 0,0);
 
-  //ellipse (630,550,100,100); 
- var ballSize = 550;
-  var ballSize = map(bass,200,200,10,10);
-  ellipse (width/2,bass, ballSize );
-
-
-
-  //////////////////////////////////////////////
-
-let SecondRun = true
-let eye = {};
-function draw_one_frame (vocal,drum,bass,other){
-  if (SecondRun){
-rectMode(CENTER);
-eye.push(loadImage('eyes_0.png'));
-eye.push(loadImage('eyes_1.png'));
-eye.push(loadImage('eyes_2.png'));
-
-SecondRun = flase 
-  }
-
-let VocalFrame = int(map(vocal,0,100,0,2));
-concole.log(VocalFrame);
-push();
-scale();
-images(eye[VocalFrame],width/2, height/2);
-pop();
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  }
-
-
-  //textFont('Verdana'); // please use CSS safe fonts
   
+  fill (0);
+  var ball = (50,100);
+  ellipse (630,545,bass,ball);
+ 
 
- // var drumHight = map(drum,0,100,0+ballSize/5,height );
- // var ballSize = map(bass,0,100,40,150);
- // fill (0);
+var dot = (20,20);
+ fill (9,132,113);
 
- // ellipse (width/2,drum, ballSize );
-////ellipse (500,500,500,500);
-//ellipse (200,200,200,200);
-//ellipse (400,200,200,100);
-  
- //for (var i=1; i <5;  i++  ){
- //var step = i=10;
- // ellipse (step,drum, ballSize );
-//ellipse ( )
+ ellipse (340,730,dot);
+ ellipse (400,800,dot);
+ellipse (500,880,dot);
+ellipse (630,884,dot);
+ellipse (760,880,dot);
+ ellipse (855,800,dot);
+ ellipse (910,730,dot);
 
+
+
+///////////small eyes 
+ let eyelid =  125;
+ let eyeheight = map(drum,0,100,1400,1400);
+fill (239,157,174);
+ stroke (239,157,174);
+ ellipse(220,eyeheight,eyelid,drum);
+ 
+ //sideeye
+ ellipse (220,1210,125,drum,400);
+ellipse (370,1210,125,drum,400);
+ellipse (370,1400,125,drum,400);
+ellipse (820,1210,125,drum,400);
+ellipse (960,1210,125,drum,400);
+ellipse (820,1400,125,drum);
+ellipse (960,1400,125,drum);
+// middle eyes 
+ ellipse (520,1110,125,bass,400);
+ ellipse (520,1300,125,bass);
+ ellipse (670,1110,125,bass,400);
+ ellipse (670,1300,125,bass);
+
+
+ellipse (630,500,825,bass,800);
+
+
+
+
+
+
+
+
+
+
+
+  }
