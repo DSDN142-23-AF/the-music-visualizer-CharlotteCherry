@@ -1,43 +1,87 @@
 
-// vocal, drum, bass, and other are volumes ranging from 0 to 100
-function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  background(20)
-  textFont('Verdana'); // please use CSS safe fonts
-  rectMode(CENTER)
-  textSize(24);
+// vocal, drum, bass, and other are volumes ranging from 0 to 100  
+ 
+let firstRun = true;
+  let testIng;
+  
+  function draw_one_frame (vocal,drum,bass,other){
+  
+  if(firstRun){
+  //rectmode (CENTER);
+  rectMode (CENTER);
+  testIng = loadImage ('Background.png');
+  
+  firstRun=false
+  
+  }
+  
+  background (20);
+  image (testIng, 0,0);
 
-   let bar_spacing = height / 10;
-   let bar_height = width / 12;
-   let bar_pos_x = width / 2;
- 
+  
+  
 
-   // vocal bar is red
-   fill(200, 0, 0);
-   rect(bar_pos_x, height / 2 + 1 * bar_spacing, 4 * vocal, bar_height);
-   fill(0);
-   text("vocals", bar_pos_x, height / 2 + 1 * bar_spacing + 8);
+
+
+///////////small eyes 
+ let eyelid =  125;
+ let eyeheight = map(drum,0,100,1400,1400);
+fill (239,157,174);
+ stroke (239,157,174);
+ ellipse(220,eyeheight,eyelid,drum);
  
-   // drum bar is green
-   fill(0, 200, 0);
-   rect(bar_pos_x, height / 2 + 2 * bar_spacing, 4 * drum, bar_height);
-   fill(0);
-   text("drums", bar_pos_x, height / 2 + 2 * bar_spacing + 8);
- 
-   // bass bar is blue
-   fill(50, 50, 240);
-   rect(bar_pos_x, height / 2 + 3 * bar_spacing, 4 * bass, bar_height);
-   fill(0);
-   text("bass", bar_pos_x, height / 2 + 3 * bar_spacing + 8);
- 
-   // other bar is white
-   fill(200, 200, 200);
-   rect(bar_pos_x, height / 2 + 4 * bar_spacing, 4 * other, bar_height);
-   fill(0);
-   text("other", bar_pos_x, height / 2 + 4 * bar_spacing + 8);
-   fill(255, 255, 0);
- 
-   // display "words"
-   textAlign(CENTER);
-   textSize(vocal);
-   text(words, width/2, height/3);
-}
+ //sideeye
+ ellipse (230,1210,125,drum,400);
+ellipse (370,1210,125,drum,400);
+ellipse (370,1400,125,drum,400);
+
+ellipse (830,1210,125,drum);
+ellipse (960,1210,125,drum);
+ellipse (830,1400,125,drum);
+ellipse (960,1400,125,drum);
+
+ellipse (370,1015,125,bass);
+ellipse (230,1015,125,bass);
+ellipse (370,830,125,bass);
+ellipse (230,830,125,bass);
+
+ellipse (370,645,125,drum);
+ellipse (230,645,125,drum);
+ellipse (370,455,125,drum);
+ellipse (230,455,125,drum);
+
+ellipse (830,1015,125,bass);
+ellipse (960,1015,125,bass);
+ellipse (830,830,125,bass);
+ellipse (960,830,125,bass);
+
+ellipse (830,645,125,drum);
+ellipse (960,645,125,drum);
+ellipse (830,455,125,drum);
+ellipse (960,455,125,drum);
+
+
+
+// middle eyes 
+ ellipse (520,1110,125,bass);
+ ellipse (520,1300,125,bass);
+ ellipse (670,1110,125,bass);
+ ellipse (670,1300,125,bass);
+
+ellipse (520,930,125,drum);
+ellipse (660,930,125,drum);
+ellipse (520,740,125,drum);
+ellipse (660,740,125,drum);
+
+ellipse (520,545,125,bass);
+ ellipse (520,354,125,bass);
+ ellipse (670,545,125,bass);
+ ellipse (670,354,125,bass);
+
+
+
+
+
+
+
+  }
